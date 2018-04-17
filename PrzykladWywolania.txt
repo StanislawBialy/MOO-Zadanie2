@@ -1,0 +1,4 @@
+F = @(x,y) x.*exp(-x.^2-y.^2);
+[V]=odnajdywanieWiezcholkow(1,1,2)
+
+[V0,y0,dV,dy]=MetodaSumpleks(F,V,10,20,0.001,1)
