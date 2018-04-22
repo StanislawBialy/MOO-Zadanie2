@@ -1,14 +1,15 @@
-function F = ner(  )
-F = @(x,y,z) exp(x^.2+y.^2)+log(4+y.^2+2*z.^2)
+function F = ner2( Fx,W )
+% @(x,y,z) exp(x^.2+y.^2)+log(4+y.^2+2*z.^2)
+F = Fx
 fun = @(u) F(u(1),u(2),u(3))
-V = [-6 0 -2; 
-    -4 2 5; 
-    2 4 1;
-    3 -1 2];
-    
+% V = [-6 0 -2; 
+%     -4 2 5; 
+%     2 4 1;
+%     3 -1 2];
+V =W;
 F=fun;
 min1=10;
-max1=500;
+max1=5000;
 al=1;
 gam=2;
 bet=0.5;
