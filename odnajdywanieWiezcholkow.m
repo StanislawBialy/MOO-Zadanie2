@@ -1,9 +1,15 @@
-function[V]=odnajdywanieWiezcholkow(x, y, odleglosc)
-%tab[3][2];
-%for v = 1.0:+1:3.0
-xV = [x;x-odleglosc;x+odleglosc];
-yV = [y+odleglosc;y-odleglosc;y-odleglosc];
-V =[xV,yV]
-%
+function[V]=odnajdywanieWiezcholkow(x, odleglosc, nWymiar)
+N=nWymiar;
+A=zeros(N+1:N);
+for  i=1:N+1;
+    for j=1:N;
+        if(i~=j)
+            A(i,j)=x;
+        else
+            A(i,j)=x+odleglosc;
+    end
+end
+
+V =A;
 
 end
