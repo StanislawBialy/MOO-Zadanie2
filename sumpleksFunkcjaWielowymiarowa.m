@@ -16,7 +16,7 @@ function[V0,y0,dV,dy,V]=MetodaSumpleks(F,V,min1,max1,epsilon,show)
 %V = odnajdywanieWiezcholkow(1,5,3)
 %[V0,y0,dV,dy,V]=MetodaSumpleks(F,V,10,400,0.0000001,1)
 
-F=@(x,y,z)((x + 1).^2 + y.^2 + (z - 1).^2 - sin(x + 1).^2 + y.^2 + (z - 1).^2).^2;
+% F=@(x,y,z)((x + 1).^2 + y.^2 + (z - 1).^2 - sin(x + 1).^2 + y.^2 + (z - 1).^2).^2;
 F = @(u) F(u(1),u(2),u(3));
 if nargin==5,
     show=0;
